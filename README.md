@@ -5,4 +5,4 @@
 - 플랫폼 : Baekjoon, Programmers, SWEA
 
 ## 문제 풀이 일정
-- 2026.02.02 : [[Gold3] 현욱은 괄호왕이야!](https://www.acmicpc.net/problem/15926) [(코드 확인)](./Baekjoon/15926_현욱은_괄호왕이야!!.cpp)
+- 2026.02.02 : [[Gold3] 현욱은 괄호왕이야!](https://www.acmicpc.net/problem/15926) [(코드 확인)](./Baekjoon/Gold/15926_현욱은_괄호왕이야!!.cpp)
