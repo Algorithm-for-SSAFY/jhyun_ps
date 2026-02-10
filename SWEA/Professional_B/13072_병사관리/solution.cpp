@@ -60,6 +60,8 @@ vector<vector<unordered_set<int>>> scoreUs;
 */
 void init()
 {
+    idUm.clear();
+    scoreUs.assign(6, vector<unordered_set<int>>(6));
 }
 
 /*
