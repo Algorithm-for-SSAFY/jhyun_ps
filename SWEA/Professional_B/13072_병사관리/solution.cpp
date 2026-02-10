@@ -114,6 +114,36 @@ void updateSoldier(int mID, int mScore)
 */
 void updateTeam(int mTeam, int mChangeScore)
 {
+    if (mChangeScore == 0) return;
+
+    // 점수가 오르는 경우
+    if (mChangeScore > 0) {
+        for (int score = 5; score >= 1; score--) {
+            int next_score = score + mChangeScore;
+            if (next_score > 5) next_score = 5;
+            if (next_score == score) continue;
+
+            for (int id : scoreUs[mTeam][score]) {
+                scoreUs[mTeam][next_score].insert(id);
+                idUm[id].second = next_score;
+            }
+            scoreUs[mTeam][score].clear();
+        }
+    }
+    // 점수가 깎이는 경우
+    else {
+        for (int score = 1; score <= 5; score++) {
+            int next_score = score + mChangeScore;
+            if (next_score < 1) next_score = 1;
+            if (next_score == score) continue;
+
+            for (int id : scoreUs[mTeam][score]) {
+                scoreUs[mTeam][next_score].insert(id);
+                idUm[id].second = next_score;
+            }
+            scoreUs[mTeam][score].clear();
+        }
+    }
 }
 
 /*
