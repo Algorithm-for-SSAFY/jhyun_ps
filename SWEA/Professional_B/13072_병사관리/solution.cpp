@@ -112,7 +112,7 @@ void updateSoldier(int mID, int mScore)
 2. ‘변경 전 평판 점수 + mChangeScore’가 1보다 작을 경우, 평판 점수를 1로 변경한다.
 3. 그 외의 경우, 평판 점수를 ‘변경 전 평판 점수 + mChangeScore’로 변경한다.
 */
-void updateTeam(int mTeam, int mChangeScore) 
+void updateTeam(int mTeam, int mChangeScore)
 {
 }
 
@@ -124,4 +124,17 @@ void updateTeam(int mTeam, int mChangeScore)
 */
 int bestSoldier(int mTeam)
 {
+    for(int score = 5; score > 0; score--){
+        int max_id = 0;
+        if(scoreUs[mTeam][score].size() == 0) continue;
+        for(int id : scoreUs[mTeam][score]){
+            if(id > max_id){
+                max_id = id;
+            }
+        }
+        if(max_id != 0){
+            return max_id;
+        }
+    }
+    return 0;
 }
