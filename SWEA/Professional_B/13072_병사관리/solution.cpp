@@ -70,6 +70,8 @@ void init()
 */
 void hire(int mID, int mTeam, int mScore)
 {
+    idUm[mID] = make_pair(mTeam, mScore);
+    scoreUs[mTeam][mScore].insert(mID);
 }
 
 /*
