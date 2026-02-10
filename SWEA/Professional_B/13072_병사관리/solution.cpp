@@ -94,6 +94,13 @@ void fire(int mID)
 */
 void updateSoldier(int mID, int mScore)
 {
+    pair<int, int> info = idUm[mID];
+    int team = info.first;
+    int score = info.second;
+
+    idUm[mID].second = mScore;
+    scoreUs[team][score].erase(mID);
+    scoreUs[team][mScore].insert(mID);
 }
 
 /*
@@ -105,7 +112,7 @@ void updateSoldier(int mID, int mScore)
 2. ‘변경 전 평판 점수 + mChangeScore’가 1보다 작을 경우, 평판 점수를 1로 변경한다.
 3. 그 외의 경우, 평판 점수를 ‘변경 전 평판 점수 + mChangeScore’로 변경한다.
 */
-void updateTeam(int mTeam, int mChangeScore)
+void updateTeam(int mTeam, int mChangeScore) 
 {
 }
 
@@ -117,5 +124,4 @@ void updateTeam(int mTeam, int mChangeScore)
 */
 int bestSoldier(int mTeam)
 {
-    return 0;
 }
