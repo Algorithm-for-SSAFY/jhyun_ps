@@ -80,6 +80,12 @@ fire() 함수 호출 시, 고유번호가 mID인 병사가 고용되어 있음�
 */
 void fire(int mID)
 {
+    pair<int, int> info = idUm[mID];
+    int team = info.first;
+    int score = info.second;
+
+    idUm.erase(mID);
+    scoreUs[team][score].erase(mID);
 }
 
 /*
