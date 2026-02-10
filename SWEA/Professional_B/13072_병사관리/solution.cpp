@@ -1,4 +1,6 @@
 #include <unordered_map>
+#include <unordered_set>
+#include <vector>
 using namespace std;
 
 /*문제 분석
@@ -31,21 +33,26 @@ using namespace std;
     - 메모리 제한 : 힙/정적 메모리 : 256MB, 스택 메몰 : 1MB
 - 아이디어
     - mID로 병사를 고용, 해고, 평판 점수 변경 -> mID를 빠르게 탐색 필요 -> unordered_map
-    - updateTeam : mTeam으로 병사들 평판 점수 모두 변경 -> O(mTeam)
-        - 만약 10만명의 병사를 모두 수정한다면? 10만번 호출하면 10억 -> 시간 초과
+    - updateTeam
+        - mTeam으로 병사들 평판 점수 모두 변경 -> O(mTeam)
+            - 만약 10만명의 병사를 모두 수정한다면? 10만번 호출하면 10억 -> 시간 초과
+        - score : 1~5, team : 1~5 -> 숫자가 작은 두 값을 활용 => updateTeam 수행 시 scoreUm에 있는 1~5점의 팀 전체를 옮기면 -> O(5)
     - mTeam으로 평판 점수가 가장 높은 병사의 mID 출력 -> O(mTeam)
 
-    - unordered_map = {
+    - unordered_map<mID, pair<team, score>> idUm = {
+        // scoreUm의 2차원 배열의 index 저장
         mID : (mTeam, mScore),
         ...
     }
-    - unordered_map = {
-        mTeam : [mID, mID, ...],
-        ...
+    - vector<vector<unordered_set>>> scoreUs[score][team] = {
+        mID, ...
     }
 
     - 소속팀 : 1~5, 평판 점수 : 1~5
 */
+
+unordered_map<int, pair<int, int>> idUm;
+vector<vector<unordered_set<int>>> scoreUs;
 
 /*
 각 테스트 케이스의 처음에 호출
