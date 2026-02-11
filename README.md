@@ -5,6 +5,10 @@
 - 플랫폼 : Baekjoon, Programmers, SWEA
 
 ## 문제 풀이 일정
+- 2026.02.11 : [[D4] 수열 편집](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWTVuc46cSIDFAVT) [(코드 확인)](./SWEA/D4/5122_수열_편집/main.cpp)
+- 2026.02.11 : [[D3] 암호문3](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14zIwqAHwCFAYD) [(코드 확인)](./SWEA/D3/1230_암호문3/main.cpp)
+- 2026.02.11 : [[D3] 이진수 표현](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AXRSXf_a9qsDFAXS) [(코드 확인)](./SWEA/D3/10726_이진수_표현/main.cpp)
+- 2026.02.10 : [[Pro] 병사관리](./SWEA/Professional_B/13072_병사관리/PROBLEM.md) [(코드 확인)](./SWEA/Professional_B/13072_병사관리/solution.cpp)
 - 2026.02.09 : [[D2] 새로운 불면증 치료법](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18_yw6I9MCFAZN) [(코드 확인)](./SWEA/D2/1288_새로운_불면증_치료법/main.cpp)
 - 2026.02.06 : [[모의 SW 역량테스트] 2115. 벌꿀채취](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V4A46AdIDFAWu) [(코드 확인)](./SWEA/모의_SW_역량테스트/2115_벌꿀채취/sol.py)
 - 2026.02.05 : [[Gold4] 가운데서 만나기](https://www.acmicpc.net/problem/21940) [(코드 확인)](./Baekjoon/Gold/21940_가운데에서_만나기.cpp)
